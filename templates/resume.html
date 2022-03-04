@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic|Open+Sans:300,400,500,700|Waiting+for+the+Sunrise|Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../static/resume.css"/>
+    <title>Resume Generator</title>
+</head>
+<body>
+    <style>
+        #nameField,#mailField,#numberField,#birthField,#placeField{
+            border: 1px solid rgb(49, 48, 48);
+        }
+        #collegeField,#degreeField,#graduationField,#a,#c,#b,#d,#aboutfield,#e,#githubField,#linkedinField{
+            border: 1px solid rgb(49, 48, 48);
+        }
+    </style>
+     <div class="heading">
+         <!-- <h1 class="text-center">Job Coach</h1> -->
+         <ul>
+            <!-- <li><a href="home.html" style="text-decoration: none; color: black; font-size: large; font-weight: 800;">Home</a></li>
+            <li><a href="practice.html" style="text-decoration: none; color: black; font-size: large; font-weight: 800;">Practice Questions</a></li> -->
+          </ul>
+     </div>
+     <div class="container my-5" id="cv-form">
+         <h1 class="text-center my-2"  style="color: #6c63ff;">Resume Builder</h1>
+         <p class="text-center" style="color:black; font-size: 18px; font-weight: 500;">Generate your own Resumes</p>
+<br>
+         <div class="row">
+             <div class="col-md-6">
+                 <h3>Personal Information</h3>
+                 <br>
+                 <div class="form-group">
+                     <label for="nameField">Name</label>
+                     <input type="text" id="nameField" 
+                     placeholder="Enter your name" 
+                     class="form-control"/>
+                 </div>
+                 <div class="form-group mt-3">
+                    <label for="mailField">Email</label>
+                    <input type="text" id="mailField" 
+                    placeholder="Enter your mail" 
+                    class="form-control"/>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="numberField">Phone Number</label>
+                    <input type="text" id="numberField" 
+                    placeholder="Enter your number" 
+                    class="form-control"/>
+                </div>
+                
+                <div class="form-group mt-3">
+                    <label for="birthField">Date of Birth</label>
+                    <input type="date"
+                        id="birthField" 
+                    placeholder="Enter here" 
+                    class="form-control"
+                   />
+                    
+                </div>
+                <div class="form-group mt-3">
+                    <label for="placeField">Place</label>
+                    <input type="text" id="placeField" 
+                    placeholder="Enter your location" 
+                    class="form-control"/>
+                </div>
+                <br>
+                <h3 >Educational Information</h3>
+                <br>
+                 <div class="form-group mt-3">
+                     <label for="collegeField">College/University</label>
+                     <input type="text" id="collegeField" 
+                     placeholder="Enter your college" 
+                     class="form-control"/>
+                 </div>
+                 <div class="form-group mt-3">
+                    <label for="degreeField">Degree </label>
+                    <input type="text" id="degreeField" 
+                    placeholder="Enter your degree" 
+                    class="form-control"/>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="graduationField">Year of graduation</label>
+                    <input type="text" id="graduationField" 
+                    placeholder="Enter here" 
+                    class="form-control"/>
+                </div>
+               <br>
+                <div class="form-group mt-3" id="ac">
+                    <label for="">Achievements/ Additional Information</label>
+                    <textarea id="c"
+                    placeholder="Enter here" 
+                    class="form-control acfield"
+                    ></textarea> 
+              
+                <div class="container text-center mt-2" id="acAddButton">
+                    <button onclick ="addNewacfield()" class="btn btn-primary btn-sm" style="color: white; background-color: #6c63ff;">Add</button>
+                </div>
+            </div>
+  
+            <div class="form-group mt-3" id="cr">
+                <label for="">Certifications</label>
+                <textarea id="d"
+                placeholder="Enter here" 
+                class="form-control crfield"
+                ></textarea> 
+          
+            <div class="container text-center mt-2" id="crAddButton">
+                <button onclick ="addNewcrfield()" class="btn btn-primary btn-sm" style="color: white; background-color: #6c63ff;">Add</button>
+            </div>
+        </div>
+             </div>
+             <div class="col-md-6">
+
+                <h3 >Professional Information</h3>
+                <br>
+                <div class="form-group mt-3">
+                    <label for="">About</label>
+                    <textarea
+                    id="aboutfield"
+                    placeholder="Enter here" 
+                    class="form-control"
+                    ></textarea> 
+                </div>
+                <div class="form-group mt-3" id="pr">
+                    <label for="">Projects</label>
+                    <textarea id="a"
+                    placeholder="Enter here" 
+                    class="form-control prfield"
+                    ></textarea> 
+              
+                <div class="container text-center mt-2" id="prAddButton">
+                    <button onclick ="addNewprfield()" class="btn btn-primary btn-sm" style="color: white; background-color: #6c63ff;">Add</button>
+                </div>
+            </div>
+            <div class="form-group mt-3" id="sk">
+                <label for="">Skills</label>
+                <textarea id="b"
+                placeholder="Enter here" 
+                class="form-control skfield"
+                ></textarea> 
+          
+            <div class="container text-center mt-2" id="skAddButton">
+                <button onclick ="addNewskfield()" class="btn btn-primary btn-sm" style="color: white; background-color: #6c63ff;">Add</button>
+            </div>     
+        </div>
+        <div class="form-group mt-3">
+            <label for="mailField">Profiles</label>
+            <input type="text" id="githubField" 
+            placeholder="Github Profile" 
+            class="form-control"/><br>
+            <input type="text" id="linkedinField" 
+            placeholder="Linkedin Profile" 
+            class="form-control"/>
+        </div>
+<br>
+
+<div class="form-group mt-3" id="hb">
+    <label for="">Hobbies</label>
+    <textarea id="e"
+    placeholder="Enter here" 
+    class="form-control hbfield"
+    ></textarea> 
+
+<div class="container text-center mt-2" id="hbAddButton">
+    <button onclick ="addNewshbfield()" class="btn btn-primary btn-sm" style="color: white; background-color: #6c63ff;">Add</button>
+</div>     
+</div>
+    <img src="../static/res.svg" alt="" height="400px" width="400px" style="position: relative; left: 110px;">
+
+
+             </div>
+         </div>
+         <div class="container text-center mt-3">
+             <button id="generateCV" onclick="generateCV()" class="btn btn-primary btn-lg"style="color: rgb(245, 241, 241); background-color: #6c63ff;">Generate Resume</button>
+         </div>
+     </div>
+
+     
+    <!-- cv template -->
+
+    <div class="container my-5" id="cv-template">
+        <div class="row">
+            <div class="col-md-4 text center py-5 background">
+                <img src="https://cdn2.vectorstock.com/i/1000x1000/20/76/man-avatar-profile-vector-21372076.jpg" alt="" class="img-fluid myimg" style="position: relative; right: 70px;"/>
+                <br>
+                <br>
+                <div class ="name">
+                    <h1 id="nameT" class="text-center"> Srujana</h1>
+                    <h2 class="text-center">Contact Details</h2>
+                    <br>
+                    <h5>Email :</h5><h4 id="mailT">abc@gmail.com</h4>
+                    <h5>Phone Number :</h5><h4 id="numberT">58451202</h4>
+                    <h5>Date of Birth :</h5><h4 id="dobT">05-04-4005</h4>
+                    <h5>Place :</h5><h4 id="place">Visakhapatnam</h4>
+                    <br>
+                    <hr>
+                    <h2 class="text-center">Education Details</h2>
+                    <br>
+                    <h5>College :</h5><h4 id="collegeT">anjnjfh</h4>
+                    <h5>Degree :</h5><h4 id="degreeT">Btech Cse</h4>
+                    <h5>Year of Graduation :</h5><h4 id="yearT">2023</h4>
+                    <br>
+                    <hr>
+                    <h2 class="text-center">Profiles</h2>
+                    <br>
+                    <h5>Linkedin profile:</h5><h4 id="git">anjnjfh</h4>
+                    <h5>Github profile:</h5><h4 id="linked">anjnjfh</h4>
+            </div>
+            </div>
+        <div class="col-md-8 py-5 second">
+            <h1 id="nameT2" class="text-center" style="font-weight: 980">Srujana Musti</h1>
+
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3 style="color:white">About</h3>
+                </div>
+                <div class="card-body">
+                    <p id="aboutT">Lorem ipsum dolor sit 
+                    amet consectetur, adipisicing elit. Autem commodi quas,
+                      recusandae repellendus laborum debitis inventore nihil
+                   obcaecati voluptatum eos fuga 
+                   asperiores odit esse pariatur.</p>
+
+                </div>
+            </div>
+            <!-- Projects -->
+
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3 style="color:white">Projects</h3>
+                </div>
+                <div class="card-body">
+                   <ul id="projectT">
+                       <li>
+                           Lorem ipsum dolor sit amet 
+                           
+                       </li>
+                       <li>
+                        Lorem ipsum dolor sit amet 
+                        
+                    </li>
+                    <li>
+                        Lorem ipsum dolor sit amet 
+                        
+                    </li>
+                   </ol>
+                </div>
+            </div>
+
+            <!-- Skills -->
+
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3 style="color:white">Skills</h3>
+                </div>
+                <div class="card-body">
+                   <ul id="skillsT">
+                       <li>
+                           Lorem ipsum dolor sit amet 
+                           
+                       </li>
+                       <li>
+                        Lorem ipsum dolor sit amet 
+                        
+                    </li>
+                    <li>
+                        Lorem ipsum dolor sit amet 
+                        
+                    </li>
+                   </ol>
+                </div>
+            </div>
+ 
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3 style="color:white">Certifications</h3>
+                </div>
+                <div class="card-body">
+                   <ul id="cert">
+                       <li>
+                           Lorem ipsum dolor sit amet 
+                           
+                       </li>
+                       <li>
+                        Lorem ipsum dolor sit amet 
+                        
+                    </li>
+                    <li>
+                        Lorem ipsum dolor sit amet 
+                        
+                    </li>
+                   </ol>
+                </div>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3 style="color:white">Achievements & Additional Information</h3>
+                </div>
+                <div class="card-body">
+                   <ul id="add">
+                       <li>
+                           Lorem ipsum dolor sit amet 
+                           
+                       </li>
+                       <li>
+                        Lorem ipsum dolor sit amet 
+                        
+                    </li>
+                    <li>
+                        Lorem ipsum dolor sit amet 
+                        
+                    </li>
+                   </ol>
+                </div>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3 style="color:white">Hobbies</h3>
+                </div>
+                <div class="card-body">
+                   <ol id="hob">
+                       <li>
+                           Lorem ipsum dolor sit amet 
+                           
+                       </li>
+                       <li>
+                        Lorem ipsum dolor sit amet 
+                        
+                    </li>
+                    <li>
+                        Lorem ipsum dolor sit amet 
+                        
+                    </li>
+                   </ol>
+                </div>
+            </div>
+ 
+            <div class="containers mt-3 text-center ">
+                <button onclick="printCV()"class="btn" style="background-color: black; color: white;">
+                    Print Resume
+                </button>
+            </div>
+        </div>
+
+        </div>
+    </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="../static/resume.js"></script>
+</body>
+</html>

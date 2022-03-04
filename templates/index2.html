@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    body{
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    min-height: 100vh;
+    overflow: hidden;
+}
+.sad{
+    height: 150px;
+    width: 150px;
+    position: relative;
+    background-color: #fbba08;
+    border-radius: 50%;
+    box-shadow: inset 0 0 7px rgba(0,0,0,0,5);
+    animation: sad 1s linear infinite;
+}
+.sad::before{
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    width: 80%;
+    height: 20px;
+    left: 20px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 50%;
+    z-index: -1;
+}
+.face{
+    position: absolute;
+    animation: face 2s ease-in infinite;
+}
+@keyframes face {
+    25%,35%{
+        top: -15px;
+    }
+    55%,95%{
+        top: 10px;
+    }
+    100%,0%{
+        top: 0px;
+    }
+}
+.eyebrows{
+    position: absolute;
+    height: 6px;
+    width: 6px;
+    /* background-color: black; */
+    border-radius: 50%;
+    left: 70px;
+    top: 50px;
+    box-shadow: -40px 9px 0 0 #000,
+                -25px 0 0 0 #000,
+                25px 0 0 0 #000,
+                40px 9px 0 0 #000;
+}
+.eyebrows::after{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 30px;
+    border: 6px solid transparent;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border-top-color: black;
+    top: 2px;
+    left: -12px;
+    margin-left: 30px;
+    transform: rotate(30deg);
+}
+.eyebrows::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 30px;
+    border: 6px solid transparent;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border-top-color: black;
+    top: 2px;
+    left: -12px;
+    margin-left: -30px;
+    transform: rotate(-30deg);
+}
+.eyes{
+    position: absolute;
+    height: 20px;
+    width: 16px;
+    background-color: transparent;
+    top: 65px;
+    left: 65px;
+    border-radius: 50%;
+    box-shadow: 25px 0 0 0 #000,
+                -25px 0 0 0 #000;
+}
+@keyframes teardrop {
+    0%,100%{
+        display: block;
+        left: 32px;
+        top: 15px;
+        transform: rotate(45deg) scale(0);
+    }
+    25%{
+        display: block;
+        left: 32px;
+        transform: rotate(45deg) scale(2);
+    }
+    49.9%{
+        display: block;
+        left: 32px;
+        top: 65px;
+        transform: rotate(45deg) scale(0);
+    }
+    50%{
+        display: block;
+        left: -18px;
+        top: 15px;
+        transform: rotate(45deg) scale(0);
+    }
+    75%{
+        display: block;
+        left: -18px;
+        transform: rotate(45deg) scale(2);
+    }
+    99.9%{
+        display: block;
+        left: -18px;
+        top: 65px;
+        transform: rotate(45deg) scale(0);
+    }
+}
+.eyes::after{
+    content: '';
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    background: #548dff;
+    border-radius: 0 10px 10px 10px;
+    transform-origin: 0% 0%;
+    animation: teardrop 2s ease-in infinite;
+}
+.mouth{
+    position: absolute;
+    height: 80px;
+    width: 60px;
+    border: 6px solid transparent;
+    box-sizing: border-box;
+    left: 45px;
+    top: 100px;
+    border-radius: 50%;
+    border-top-color: black;
+    animation: mouth 2s ease-in infinite;
+}
+@keyframes mouth {
+    25%,35%{
+        transform: scale(0.8);
+        top: 90px;
+    }
+    55%,100%,0%{
+        transform: scale(1);
+        top: 100px;
+    }
+}
+#btn{
+  border: 2px solid white;
+  padding: 20px;
+  background-color: #6c63ff;
+  text-decoration: none;
+  border-radius: 15px;
+  color: white;
+}
+#btn:hover{
+  background-color: blueviolet;
+  border: 2px solid black;
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorry!</title>
+</head>
+<body>
+  <center>
+    <br><br>
+    <div class="sad">
+        <div class="face">
+            <div class="eyebrows"></div>
+            <div class="eyes"></div>
+            <div class="mouth"></div>
+        </div>
+    </div>
+    <br><br>
+    <h1>{{prediction_text}}</h1>
+    <br>
+    <h2>Hardwork betrays None! With your efforts you definitly can achieve better.</h2>
+    <br>
+    <h2>Our quiz section might be a help for you. Please Do Visit!</h2>
+    <br><br>
+    <a id="btn" href="/sub">Quiz Section</a>
+  </center>
+</body>
+</html>

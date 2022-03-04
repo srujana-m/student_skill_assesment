@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<style>
+.button {
+  background-color: #6c63f6;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: 1px solid black;
+	border-radius:10px;
+	position: relative;
+	bottom: 950px;
+	right: 100px;
+}
+.button:hover{
+	background-color:blueviolet;
+	border: 1px solid black;
+	border-radius:10px;
+}
+#in{
+	height: 50px;
+	width: 240px;
+	border: 1px solid black;
+	border-radius:10px;
+}
+.left{
+	position: relative;
+	right: 400px;
+	/* width: 500px; */
+	/* background-color: pink; */
+}
+.right{
+	position: relative;
+	/* background-color: red; */
+	width: 500px;
+	bottom: 550px;
+	left:650px;
+}
+#ii{
+	position: relative;
+	left: 1100px;
+	bottom: 900px;
+}
+</style>
+
+<body>
+<div class ='login'>
+	<center>
+	<c><h1>College Placement Prediction</h1></c>
+	<br>
+	<br>
+	</center>
+
+	<form action="{{ url_for('predict')}}"method="post">
+		<div class="left">
+		<center>
+			<h2>Enter your age</h2>
+		<input id="in" type='text' name="age" placeholder="Enter here" required="required"/>
+		</center>
+		<br>
+		<center>
+			<h2>If you were / are a part of an internship Enter 1 else 0</h2>
+		<input id="in" type='text' name="internship" placeholder="Internship" required="required"/>
+		</center>
+		<br>
+		<center>
+			<h2>Enter your CGPA :</h2>
+		<input id="in" type='text' name="cgpa" placeholder="Enter CGPA" required="required"/>
+		</center>
+		<br>
+	
+	
+		<center>
+			<h2>Were you a part of any projects? Enter 1 if 'Yes' else '0'</h2>
+		<input id="in" type='text' name="hostel" placeholder="Enter here" required="required"/>
+		</center>
+		<br>
+	</div>
+	<div class="right">
+		<center>
+			<h2>Number of backlogs</h2>
+		<input id="in" type='text' name="backlogs" placeholder="Enter here" required="required"/>
+		</center>
+		<br>
+		<center>
+			<h2>Enter your Gender Enter 1 if 'Male' else '0'</h2>
+		<input id="in" type='text' name="gender" placeholder="Enter here" required="required"/>
+		</center>
+		<br>
+		<center>
+			<h2>Enter your Stream :
+				<br>
+				 CSE - 1
+				<br>
+				 ECE -2
+				<br>
+				EEE -3
+				<br>
+				MECH -4
+				<br>
+				CIVIL -5
+			</h2>
+		<input id="in" type='text' name="stream" placeholder="stream" required="required"/>
+		</center>
+		<br>
+	</div>
+	<img id="ii" height="400px" width="400px" src="../static/undraw_job_offers_kw5d.svg" alt="">
+		<center>
+
+		<button type="submit" class="button">Predict Placement</button>
+		</center> 
+	</form>
+
+</div>
+</body>
+</html>

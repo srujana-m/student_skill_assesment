@@ -1,0 +1,46 @@
+#cv-template {
+    display: none;
+}  
+
+.heading ul li{
+    margin-left: 27rem;
+    display: inline-block;
+}
+h5{
+    color: black;
+}
+hr {
+
+    background-color: rgb(245, 239, 239);
+    border: none;
+}
+.myimg{
+
+    margin-left: 150px;
+    border-radius: 50%;
+    width:200px;
+}
+
+.background{
+    background-color: #5d55f7;
+    /* background-color: rgb(70, 41, 109); */
+}
+.second{
+    background-color: whitesmoke;
+    /* background-color: rgb(71, 187, 158); */
+}
+
+.name{
+    color: white;
+}
+.con-and-edu{
+    color: white;
+    text-align: center;
+    
+}
+.con-and-edu p{
+    color: rgb(195, 236, 255);
+    text-align: center;
+    font-size:30px;
+    
+}

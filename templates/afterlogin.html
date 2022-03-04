@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/sub.css">
+    <title>Document</title>
+</head>
+<body>
+
+        <center>
+    <div class="page-container">
+      
+      <div class="page">
+        <div class="card-container" onclick="moveF()">
+          <div class="card" id="card1">
+    <ion-icon name="code-slash-outline"></ion-icon>
+            <h6>Resume Generator</h6>
+            <p>Confused about how to build your resume? This will help you build one.</p>
+            <button class="more" id="b1">Click Here</button>
+          </div>
+          <div class="card" id="card2">
+    <ion-icon name="color-palette-outline"></ion-icon>
+            <h6>Take Quiz</h6>
+            <p>Analyze your technical skills related to DBMS, PYTHON, OS, CN.</p>
+            <button class="more" id="b2">Click Here</button>
+          </div>
+          <div class="card" id="card3">
+    <ion-icon name="speedometer-outline"></ion-icon>
+            <h6>Predict Placement</h6>
+            <p>Anxious about getting placed or not? Then we will help you to check what prefers you best.</p>
+            <button class="more" id="b3">Click Here</button>
+          </div>
+          <div class="card" id="card4">
+              <ion-icon name="speedometer-outline"></ion-icon>
+                      <h6>Chatbot</h6>
+                      <p>Have any queries? Come and interact with us through this Chatbot.</p>
+                      <button class="more" id="b4">Click Here</button>
+                    </div>
+          
+        </div>
+      </center>
+      </div>
+      <!-- <button onclick="moveB()" id="btn">Cancel</button> -->
+    </div>
+    <footer>
+      <svg viewBox="0 0 60 14">
+       <defs> 
+         <mask id="xxx">
+           <circle cx="7" cy="12" r="40" fill="#fff" />
+         </mask>
+         
+         <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="
+                 1 0 0 0 0  
+                 0 1 0 0 0  
+                 0 0 1 0 0  
+                 0 0 0 13 -9" result="goo" />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+           <path id="wave" d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
+        </defs> 
+      
+         <use id="wave3" class="wave" xlink:href="#wave" x="0" y="-2" ></use> 
+         <use id="wave2" class="wave" xlink:href="#wave" x="0" y="0" ></use>
+       
+        
+        <g class="gooeff">
+        
+          <use id="wave1" class="wave" xlink:href="#wave" x="0" y="1" />
+        
+          <!-- g mask="url(#xxx)">
+          <path   id="wave1"  class="wave" d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
+          </g>
+        </g -->
+      
+      </svg>
+      
+        
+      </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="../static/afterlogin.js"></script>
+  </body>
+  
+  
+
+</html>

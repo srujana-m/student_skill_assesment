@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='sub.css')}}">
+  <!-- <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='landing.css')}}"> -->
+  <title>Home</title>
+</head>
+<body>
+      <center>
+  <div class="page-container">
+    
+    <div class="page">
+      <div class="card-container" onclick="moveF()">
+        <div class="card" id="card1">
+  <ion-icon name="code-slash-outline"></ion-icon>
+          <h6>PYTHON</h6>
+          <p>Python is the current programming trend . Many multinational compnies use python for their development
+            Take the python test and know your skills
+          </p>
+          <button class="more" id="b1">Take Test</button>
+        </div>
+        <div class="card" id="card2">
+  <ion-icon name="color-palette-outline"></ion-icon>
+          <h6>DBMS</h6>
+          <p>How the data is stored in the real world.Many applications are developed on the basis of a proper 
+            database.Test your dbms skills now
+          </p>
+          <button class="more" id="b2">Take Test</button>
+        </div>
+        <div class="card" id="card3">
+  <ion-icon name="speedometer-outline"></ion-icon>
+          <h6>OPERATING SYSTEM</h6>
+          <p>Operating system is the interface between the user and the system.It is mostly preferred in all 
+            product based companies .Test your OS skills now.
+          </p>
+          <button class="more" id="b3">Take Test</button>
+        </div>
+        <div class="card" id="card4">
+            <ion-icon name="speedometer-outline"></ion-icon>
+                    <h6>COMPUTER NETWORK</h6>
+                    <p>The networking concept is a very sophisticated concept used in the IT world.
+                      Test your networking concepts
+                    </p>
+                    <button class="more" id="b4">Take Test</button>
+                  </div>
+        
+      </div>
+    </center>
+    </div>
+    <button id="btn">Go to Dashboard</button>
+  </div>
+  <a href="/dashboard">Dashboard</a>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="{{url_for('static',filename='sub.js')}}"></script>
+</body>
+
+<footer id="footer">
+  <svg viewBox="0 0 60 14">
+   <defs> 
+     <mask id="xxx">
+       <circle cx="7" cy="12" r="40" fill="#fff" />
+     </mask>
+     
+     <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="
+             1 0 0 0 0  
+             0 1 0 0 0  
+             0 0 1 0 0  
+             0 0 0 13 -9" result="goo" />
+        <feBlend in="SourceGraphic" in2="goo" />
+      </filter>
+       <path id="wave" d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
+    </defs> 
+  
+     <use id="wave3" class="wave" xlink:href="#wave" x="0" y="-2" ></use> 
+     <use id="wave2" class="wave" xlink:href="#wave" x="0" y="0" ></use>
+   
+    
+    <g class="gooeff">
+    
+      <use id="wave1" class="wave" xlink:href="#wave" x="0" y="1" />
+    
+      <!-- g mask="url(#xxx)">
+      <path   id="wave1"  class="wave" d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
+      </g>
+    </g -->
+  
+  </svg>
+  
+    
+  </footer>
+</html>
